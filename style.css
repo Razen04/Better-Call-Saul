@@ -1,0 +1,526 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Serif', serif;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#headerVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.navigation {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("banner.jpg"); */
+    background-size: cover;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.navigation img {
+    position: absolute;
+}
+
+.logo {
+    position: relative;
+    left: 85px;
+    margin-top: -18px;
+    z-index: 1;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    /* Align links to top-right */
+    width: 90%;
+    padding: 20px;
+    margin-left: 85px;
+    font-size: 1.2rem;
+    color: rgb(187, 166, 48);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+    margin-left: 55%;
+}
+
+/* Styling the navigation links */
+.links {
+    text-decoration: none;
+    color: #333;
+    /* Default text color */
+    position: sticky;
+    /* Needed for the hover animation */
+    transition: color 0.3s ease-out;
+    /* Smooth transition for text color */
+    padding: 20px;
+    color: rgb(187, 166, 48);
+}
+
+/* Hover animation for navigation links */
+.links::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #b87333be;
+    /* Color of the underline */
+    transform: scaleX(0);
+    /* Initial state: no underline */
+    transform-origin: bottom left;
+    /* Animation origin point */
+    transition: transform 0.3s ease;
+    /* Smooth transition for the underline */
+    z-index: -1;
+    /* Push the underline below the text */
+}
+
+.links:hover {
+    color: #b87333d0;
+    /* New text color on hover */
+}
+
+/* Hover animation for the underline */
+.links:hover::before {
+    transform: scaleX(1);
+    /* Full-width underline on hover */
+    transform-origin: bottom right;
+    /* Animation origin point */
+}
+
+.appoint {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15%;
+    margin-left: 75px;
+    z-index: 2;
+}
+
+.appoint p {
+    padding: 15px;
+}
+
+.big {
+    font-size: 3rem;
+    color: white;
+}
+
+.small {
+    color: gold;
+    font-size: 1rem;
+    width: 500px;
+}
+
+button {
+    background-color: #f9a20b;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s ease all;
+    height: 3rem;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 1.2rem;
+    font-weight: 550;
+    border-radius: 5px;
+}
+
+button:hover {
+    transform: translateY(-2px) scale(.98);
+    background-color: black;
+    color: #f9a20b;
+    box-shadow: inset 0px -2px #c87d0a;
+}
+
+.details {
+    position: relative;
+    display: flex;
+    width: 30%;
+    height: 300px;
+    margin: 20vw 31vw;
+
+
+}
+
+.details div {
+    padding-bottom: 30px;
+}
+
+.details i {
+    padding-top: 13px;
+    padding-right: 20px;
+}
+
+.call {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+}
+
+.details h2 {
+    text-align: left;
+    color: rgb(187, 166, 48);
+}
+
+.details h3 {
+    display: inline-block;
+    color: white;
+
+}
+
+.location {
+    padding-top: 80px;
+    display: flex;
+    margin-left: -36px;
+
+}
+
+.location i {
+    padding-top: 13px;
+    padding-right: 15px;
+}
+
+/* main section */
+.main {
+    width: 100%;
+}
+
+.experience {
+    margin: 150px 125px;
+    width: 575px;
+
+
+}
+
+.experience h1 {
+    padding-top: 20px;
+    font-size: 2.6rem;
+
+}
+
+.experience img {
+    position: absolute;
+    width: 42%;
+    height: 585px;
+    left: 55%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.smaller {
+    color: red;
+}
+
+.bigger {
+    padding-top: 30px;
+    color: black;
+    line-height: 1.7;
+}
+
+.exp {
+    margin-top: 50px;
+    width: 233px;
+}
+
+.exp h3 {
+    padding-top: 10px;
+}
+
+.exp p {
+    padding-top: 10px;
+    line-height: 1.5;
+}
+
+.exp i {
+    font-size: larger;
+}
+
+.exp1 {
+    margin-left: 58%;
+    margin-top: -137px;
+    width: 292px;
+}
+
+.exp1 h3 {
+    padding-top: 10px;
+}
+
+.exp1 p {
+    padding-top: 10px;
+    line-height: 1.5;
+}
+
+.exp1 i {
+    font-size: larger;
+}
+
+.partners {
+    display: flex;
+    margin-left: 29%;
+}
+
+.main h1 {
+    text-align: center;
+    margin: 0 0;
+}
+
+.partners i {
+    padding: 40%;
+    font-size: 5rem;
+}
+
+.logo1 {
+    justify-content: center;
+    margin-left: 14%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 20;
+}
+.logo1 img{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    height: 100px;
+    margin: 72px;
+    padding:0 100px;
+    text-align: center;
+    z-index: 2000;
+}
+
+.practice {
+    background-color: rgba(209, 214, 214, 0.3);
+    padding-top: 50px;
+}
+
+.practice h1 {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.area {
+    margin: 0 175px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.area1 {
+    margin: 0 175px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.exp2 {
+    border: 2px solid #ccc;
+    padding: 30px;
+    width: 206px;
+}
+
+.exp2:hover {
+    background-color: white;
+}
+
+.exp2 i {
+    margin-bottom: 30px;
+}
+
+.exp2 h3 {
+    margin-bottom: 10px;
+}
+
+.exp2 a {
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    color: #f9a20b;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.exp2 a:hover {
+    transform: translateY(-10px);
+
+}
+
+.unique {
+    margin-top: 100px;
+    text-align: center;
+
+}
+
+.person {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    background-color: rgba(231, 229, 229, 0.5);
+
+}
+
+.man {
+    margin: 70px 30px;
+    text-align: center;
+}
+
+.man h2 {
+    margin-top: 10px;
+}
+
+iframe {
+    border-radius: 10px;
+    border: 2px solid #f90b0b;
+}
+
+.clients {
+    color: wheat;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
+        url("banner2.jpg") center/cover no-repeat;
+    height: 600px;
+    margin-top: 100px;
+
+}
+
+h1 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+
+}
+
+.client1 {
+    margin-left: 60%;
+    margin-top: 100px;
+
+}
+
+.client1 i {
+    margin-top: 50px;
+    font-size: 2rem;
+}
+
+.client1 p {
+    margin-top: 40px;
+    width: 500px;
+}
+
+.client1 img {
+    margin-top: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+
+}
+
+.client1 h5 {
+    margin: -43px 60px;
+
+}
+
+.client2 {
+    border-top: 2px solid rgb(221, 195, 147);
+    margin-left: 60%;
+    margin-top: 110px;
+    width: 500px;
+
+}
+
+.client2 i {
+    padding-top: 50px;
+    font-size: 2rem;
+}
+
+.client2 p {
+    margin-top: 40px;
+    width: 500px;
+}
+
+.client2 img {
+    margin-top: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+
+}
+
+.client2 h5 {
+    margin: -43px 60px;
+}
+
+footer {
+    background-color: black;
+    color: wheat;
+    display: flex;
+    border-bottom: 2px solid rgb(88, 84, 84);
+}
+
+footer a {
+    margin-top: 60px;
+}
+
+.contact {
+    margin: 78px 222px;
+
+}
+
+.contact p {
+    padding-top: 20px;
+    line-height: 1.5;
+}
+
+.prac {
+    margin: 78px 30px;
+}
+
+.prac ul {
+    margin-left: -10px;
+    padding-top: 20px;
+}
+
+.prac ul li {
+    list-style: none;
+}
+
+.prac ul li a {
+    text-decoration: none;
+    padding: 10px;
+    color: wheat;
+    transition: all ease 0.3s;
+}
+
+.prac ul li a:hover {
+    color: #c87d0a;
+}
+
+.last {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.last h4 {
+    margin: 50px 50px;
+}
